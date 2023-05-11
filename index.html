@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free BMI calculator">
+    <meta name="keywords" content="BMI, calculator, Body Mass Index, BMI calculator, Body Mass Index calculator">
+    <meta title="author" content="Okechukwu Ibeawuchi">
+    <title>NOVEE || BMI Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="1.png?">
+    <style>
+    </style>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <h1><a href="index.html">NOVEE</a><em>...Brings you closer to your future</em></h1>
+            <div class="drop">
+                <span class="site">Our site</span>
+                <div class="down">
+                    <a href="https://okechukwu01.github.io/S.I-Calculator/" target="blank">S.I Calculator</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <h2><strong>BMI CALCULATOR</strong></h2>
+    <div id="container">
+        <div id="left">
+            <h3>Body Mass Index (BMI)</h3>
+            <p id="bmi">Body Mass Index (BMI) is a person's weight in kilograms (or pounds) divided by the square of height in meters 
+                (or feet). A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, 
+                but it does not diagnose the body fatness or health of an individual.
+            </p>
+            <h3>BMI RANGES</h3>
+            <ul>
+                <li>Underweight: Less than 18.5.</li>
+                <li>Optimum range: 18.5 to 24.9.</li>
+                <li>Overweight: 25 to 29.9.</li>
+                <li>Class I obesity: 30 to 34.9.</li>
+                <li>Class II obesity: 35 to 39.9.</li>
+                <li>Class III obesity: More than 40.</li>
+            </ul>
+        </div>
+        <div id="right">
+            <form action="" id="form" onsubmit="return false">
+                <p>Weight (Kilograms)</p>
+                <input type="number" step="any" id="weight" placeholder="Enter your weight (KG)"required>
+                <p>Height (Meters)</p>
+                <input type="number" step="any" id="height" placeholder="Enter your height (M)"required><br>
+                <button type="submit" id="button" onclick="calculateBMI()">Calculate</button>
+            </form>
+            <p id="error"></p>
+            <p id="result"></p>
+            <p id="des"></p>
+        </div>
+    </div>
+    <footer>
+        <p>NOVEE. All rights reserved. Copyright &copy; 2023</p>
+        <P>Humbly made with &hearts; by Okechukwu</P>
+    </footer>
+    <script>
+        const calculateBMI = ()=>{
+            document.getElementById("error").innerHTML=""
+            document.getElementById("result").innerHTML=""
+            document.getElementById("des").innerHTML=""
+            const weight = Number(document.getElementById('weight').value);
+            const height = Number(document.getElementById('height').value);
+            const square = Math.pow(height, 2);
+            const calculate = document.getElementById('button');
+            
+            if (weight == null || weight == "" || height == null || height == ""){
+                    error.innerHTML =`
+                    Please fill all fields with relivant correct information
+                `
+            }
+        
+            else{
+                
+                const output = weight / square;
+                result.innerHTML =`
+                    Your Body Mass Index (BMI) is ${output.toFixed(2)}
+                `
+                if(output <18.5){
+                    des.innerHTML =`
+                    You are underweight
+                `}
+                if(output >=18.5){
+                    des.innerHTML =`
+                    You are on uptimum range
+                `}
+                if(output >=25){
+                    des.innerHTML =`
+                    You are overweight
+                `}
+                if(output >=30){
+                    des.innerHTML =`
+                    You are on Class I obesity
+                `}
+                if(output >=35){
+                    des.innerHTML =`
+                    You are on Class II obesity
+                `}
+                if(output >=40){
+                    des.innerHTML =`
+                    You are on Class III obesity
+                `}
+                weight.value ="";
+                height.value ="";
+            }
+                
+        }
+      </script>
+</body>
+</html>

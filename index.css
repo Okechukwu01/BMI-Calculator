@@ -1,0 +1,187 @@
+body{
+    background-image: url(bg3.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{
+    background-color: rgb(42, 42, 165, 0.958);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    height: 80px;
+}
+header .head {
+    display: flex;
+    justify-content: space-between;
+}
+header .head h1 a{
+    color: gold;
+    font-size: 50px;
+    text-decoration: none;
+    margin: 0 5px;
+    margin-left: 10px;
+}
+header .head h1 em{
+    font-size: 15px;
+    color: white;
+    margin-left: 10px;
+    font-family: sans-serif;
+}
+.drop{
+    display: inline;
+    position: absolute;
+    padding-bottom: 0;
+    margin-left: 84vw;
+    margin-top: 55px;
+}
+.site{
+    cursor: pointer;
+    color: white;
+    padding: 0 20px;
+}
+.site:hover{
+    color: blanchedalmond;
+}
+.down{
+    display: none;
+    padding: 10px;
+    position: absolute;
+    overflow: auto;
+    background-color: rgb(42, 42, 165, 0.958);
+    border-radius: 5px;
+}
+.drop:hover .down{
+    display: block;
+}
+.down a{
+    text-decoration: none;
+    display: block;
+    color: yellow;
+    text-align: center;
+    background-color: rgb(42, 42, 165, 0.958);
+}
+.down a:hover{
+    color: burlywood;
+}
+#container{
+    display: flex;
+    justify-content: space-around;
+}
+h2{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: yellow;
+    margin-top: 100px;
+}
+#left{
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 35vw;
+    height: auto;
+    background-color: rgba(239, 244, 238, 0.79);
+    border: 1px solid rgb(20, 20, 221);
+    border-radius: 5px;
+    padding: 0 1vw;
+}
+#bmi{
+    text-align: justify;
+    font-size: 18px;
+}
+ul{
+    font-size: 18px;
+}
+h3{
+    font-size: 25px;
+}
+#right{
+    margin-top: 40px;
+    margin-bottom: 100px;
+    width: 27vw;
+    height: auto;
+    background-color: rgba(239, 244, 238, 0.79);
+    border: 1px solid rgb(20, 20, 221);
+    border-radius: 5px;
+    padding: 0 5vw;
+}
+#form{
+    text-align: center;
+    font-size: 25px;
+}
+input{
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+}
+#right form p{
+    margin-bottom: 4px;
+}
+#right #form button{
+    cursor: pointer;
+    border-radius: 15px;
+    width: 80px;
+    height: 25px;
+}
+#button:hover{
+    background-color: black;
+    color: white;
+}
+#result{
+    text-align: center;
+    font-size: 20px;
+}
+#des{
+    text-align: center;
+    font-size: 20px;
+}
+#error{
+    text-align: center;
+    font-size: 20px;
+    color: red;
+}
+footer{
+    background-color: rgb(42, 42, 165, 0.958);
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+@media screen and (max-width: 680px){
+    body{
+        background-image: url(bg4.jpg);
+    }
+    header .head h1 em{
+        font-size: 2.5vw;
+    }
+    .drop{
+        display: inline;
+        background-color: rgb(42, 42, 165, 0.958);
+        position: absolute;
+        padding-bottom: 0;
+        margin-top: 80px;
+        margin-left: 0;
+    }
+    .down{
+        border-radius: 0px;
+    }
+    #container{
+        display: block
+    }
+    #left{
+        width: auto;
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+    #right{
+        width: auto;
+        margin-top: 20px;
+    }
+    h2{
+        color: yellow;
+    }
+}
